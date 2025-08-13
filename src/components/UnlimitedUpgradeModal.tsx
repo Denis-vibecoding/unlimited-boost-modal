@@ -46,7 +46,7 @@ export const UnlimitedUpgradeModal = ({ isOpen, onClose }: UnlimitedUpgradeModal
             <div className="mx-auto w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center">
               <Zap className="w-8 h-8 text-white" />
             </div>
-            <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent text-center">
               Unlock Unlimited Generations!
             </DialogTitle>
             <DialogDescription className="text-center text-muted-foreground">
@@ -66,9 +66,21 @@ export const UnlimitedUpgradeModal = ({ isOpen, onClose }: UnlimitedUpgradeModal
               <p className="text-sm text-muted-foreground line-through">
                 Regular price: $97
               </p>
-              <p className="text-xs text-muted-foreground font-medium">
-                One-time payment • Unlimited for life*
-              </p>
+              <div className="flex items-center justify-center gap-1">
+                <p className="text-xs text-muted-foreground font-medium">
+                  One-time payment • Unlimited for life*
+                </p>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="w-3 h-3 text-muted-foreground cursor-help" />
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="max-w-xs">
+                    <p className="text-xs">
+                      Magic Redesign Credits are a separate premium feature and are not included in this unlimited upgrade. This upgrade applies to standard redesign generations only.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
             </div>
 
             {/* Features */}
@@ -90,29 +102,6 @@ export const UnlimitedUpgradeModal = ({ isOpen, onClose }: UnlimitedUpgradeModal
               </div>
             </div>
 
-            {/* Important Notice */}
-            <div className="bg-muted/50 p-3 rounded-lg border-l-4 border-orange-500">
-              <div className="flex items-start gap-2">
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Info className="w-4 h-4 text-orange-500 mt-0.5 cursor-help" />
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="max-w-xs">
-                    <p className="text-xs">
-                      Magic Redesign Credits are a separate premium feature and are not included in this unlimited upgrade.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-                <div>
-                  <p className="text-xs font-medium text-orange-700 dark:text-orange-400">
-                    Note: Magic Redesign Credits not included
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    This upgrade applies to standard redesign generations only
-                  </p>
-                </div>
-              </div>
-            </div>
 
             {/* CTA Buttons */}
             <div className="space-y-3">
