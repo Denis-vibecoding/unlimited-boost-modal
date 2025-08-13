@@ -50,7 +50,7 @@ export const UnlimitedUpgradeModal = ({ isOpen, onClose }: UnlimitedUpgradeModal
               Unlock Unlimited Generations!
             </DialogTitle>
             <DialogDescription className="text-center text-muted-foreground">
-              You've reached your 100 generation limit for this month. Upgrade to unlimited and never worry about limits again!
+              You've reached your 100 generation limit for this month. Upgrade with the <span className="font-semibold text-foreground">Unlimited Add-on</span> to get unlimited generations and never worry about limits again!
             </DialogDescription>
           </DialogHeader>
 
